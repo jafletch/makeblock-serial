@@ -7,5 +7,7 @@ I started from a base of the [RaspberryPiShield](https://github.com/Makeblock-of
 
 ## Setup
 1) You will first need to push the included firmware to your Orion via the Arduino IDE. Note that this will require that you have the Makeblock libraries setup properly (tested with the v3.22 libraries).
+
 2) Make sure you have unblocked the serial port within the OS on the RPi via the instructions [here]( http://www.irrational.net/2012/04/19/using-the-raspberry-pis-serial-port/)
+
 3) Run the demo.py for a simple example of how to you the Python libraries. You may need to adjust the script for your particular set of sensors and their ports/slots before execution.
