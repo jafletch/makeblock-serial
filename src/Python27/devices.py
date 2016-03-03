@@ -178,3 +178,6 @@ class dcmotor(simpledevice):
 
     def stop(self):
         self.port.sendRequest(requestpacket(self.index, action.RUN, self.device, self.port.id, data= struct.pack("1s",0)))
+
+    def parseData(self, data):
+        return False
