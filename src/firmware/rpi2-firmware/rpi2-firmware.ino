@@ -306,11 +306,16 @@ void runModule(int device){
   int pin = port;
   switch(device){
    case MOTOR:{
-     valShort.byteVal[0] = readBuffer(7);
-     valShort.byteVal[1] = readBuffer(8);
+     valShort.byteVal[0] = readBuffer(8);
+     valShort.byteVal[1] = readBuffer(9);
      int speed = valShort.shortVal;
+     Serial.println(speed);
      dc.reset(port);
+     if (speed > 0) {
      dc.run(speed);
+     } else {
+      dc.stop();
+     }
    } 
     break;
     case STEPPER:{

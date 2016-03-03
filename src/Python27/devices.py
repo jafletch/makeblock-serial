@@ -174,10 +174,10 @@ class dcmotor(simpledevice):
         simpledevice.__init__(self, device.MOTOR)
 
     def run(self, speed):
-        self.port.sendRequest(requestpacket(self.index, action.RUN, self.device, self.port.id, data= struct.pack("1s",fl)))
+        self.port.sendRequest(requestpacket(self.index, action.RUN, self.device, self.port.id, data= struct.pack("1h",fl)))
 
     def stop(self):
-        self.port.sendRequest(requestpacket(self.index, action.RUN, self.device, self.port.id, data= struct.pack("1s",0)))
+        self.port.sendRequest(requestpacket(self.index, action.RUN, self.device, self.port.id, data= struct.pack("1h",0)))
 
     def parseData(self, data):
         return False
