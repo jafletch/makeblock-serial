@@ -1,4 +1,4 @@
-from abc import *
+﻿from abc import *
 from config import *
 from packets import *
 import struct
@@ -167,3 +167,14 @@ class ultrasonicSensor(simpledevice, readabledevice):
         if len(data) != 4:
             raise PacketError("Expected 4 bytes of data returned. Got: " + str(len(data)))
         self._value = self.bytesToFloat(data, 0)
+
+class dcmotor(simpledevice):
+
+    def __init__(self):
+        simpledevice.__init__(self, device.MOTOR)
+
+    def run(self, speed):
+        self.port.sendRequest(requestpacket(self.index, action.RUN, self.device, self.port.id, data= struct.pack("1s",fl)))
+
+    def stop(self):
+        self.port.sendRequest(requestpacket(self.index, action.RUN, self.device, self.port.id, data= struct.pack("1s",0)))
