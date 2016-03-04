@@ -1,0 +1,34 @@
+#define VERSION 0
+#define ULTRASONIC_SENSOR 1
+#define TEMPERATURE_SENSOR 2
+#define LIGHT_SENSOR 3
+#define POTENTIONMETER 4
+#define JOYSTICK 5
+#define GYRO 6
+#define SOUND_SENSOR 7
+#define RGBLED 8
+#define SEVSEG 9
+#define MOTOR 10
+#define SERVO 11
+#define ENCODER 12
+#define IR 13
+#define PIRMOTION 15
+#define INFRARED 16
+#define LINEFOLLOWER 17
+#define SHUTTER 20
+#define LIMITSWITCH 21
+#define BUTTON 22
+#define DIGITAL 30
+#define ANALOG 31
+#define PWM 32
+#define SERVO_PIN 33
+#define TOUCH_SENSOR 34
+#define STEPPER 40
+#define ENCODER 41
+#define TIMER 50
+
+#define GET 1
+#define RUN 2
+#define RESET 4
+#define START 5
+
